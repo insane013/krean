@@ -1,0 +1,152 @@
+.references
+  &__container
+    padding-top: 110px
+    padding-bottom: 100px
+    max-width: 1760px
+  &__head
+    margin-bottom: 70px
+
+  &__companies
+    max-width: 1480px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+
+  .slider
+    &-pro
+      width: 100%
+      // border: 3px solid #000
+      margin-bottom: 120px
+      .sp-arrow
+        top: 50%
+        width: 25px
+        height: 70px
+        transform: translateY(-50%)
+        &::before
+          display: none
+        &::after
+          position: absolute
+          width: 30px
+          height: 35px
+          transform: none
+          left: 0
+          top: 50%
+          transform: translateY(-50%)
+          background-image: url(../img/arrow.png)
+          background-repeat: no-repeat
+          background-color: transparent
+          background-size: contain
+      .sp-previous-arrow
+        left: -140px
+      .sp-next-arrow
+        right: -140px
+        &::after
+          transform: rotateY(180deg) translateY(-50%)
+          right: 0
+          left: auto
+      .sp-slides-container
+        max-width: 1480px
+        margin: 0 auto
+      .sp-mask
+        max-width: 1480px
+
+      .slide
+        // position: relative
+        max-width: 1480px
+        &__content
+          display: grid
+          grid-template-columns: 450px 1fr
+          grid-column-gap: 64px
+          padding-left: 33px
+        &__left
+          width: 450px
+          height: 450px
+          position: relative
+          &::after
+            content: ''
+            position: absolute
+            width: 360px
+            height: 360px
+            top: 136px
+            left: -33px
+            background-image: url('../img/border.png')
+            background-repeat: no-repeat
+          img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            z-index: 1
+        &__right
+          display: flex
+          flex-direction: column
+          justify-content: center
+        &__text
+          font-family: 'Ubuntu'
+          font-weight: 300
+          font-size: 25px
+          letter-spacing: -2px
+          color: #5f5f5f
+          margin: 0
+        &__title
+          font-family: 'Ubuntu'
+          font-weight: 700
+          font-size: 45px
+          letter-spacing: -2px
+          color: #303030
+          margin: 0
+          margin-bottom: 50px
+        &__subtitle
+          font-family: Myriad Pro
+          font-size: 31px
+          line-height: 36px
+          color: #fff
+
+
+
+
+.contact
+  background-color: #000
+  padding-top: 150px
+  padding-bottom: 100px
+  &__title
+    color: #fff
+    &::after
+      display: none
+  &__head
+    margin-bottom: 60px
+
+  &__form
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-column-gap: 40px
+    grid-row-gap: 120px
+    input
+      border: none
+      border-bottom: 1px solid #fff
+      background: transparent
+      outline: none
+      padding: 30px 35px
+      &::placeholder
+        font-family: 'Ubuntu'
+        font-weight: 200
+        font-size: 21px
+        color: #b2b2b2
+  &__msg
+    grid-column: span 2
+  &__send
+    display: flex
+    justify-content: center
+    grid-column: span 2
+    button
+      color: #fff
+      border: none
+      outline: none
+      font-family: 'UniNeue'
+      font-weight: 700
+      font-size: 30px
+      padding: 30px 70px
+      background-color: #202020
+      cursor: pointer

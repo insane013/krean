@@ -1,0 +1,65 @@
+.works
+  padding-top: 65px
+  padding-bottom: 150px
+  background-color: #ebebeb
+  &__head
+    margin-bottom: 65px
+
+  &__grid
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: 450px
+    grid-column-gap: 64px
+    grid-row-gap: 64px
+
+  .card
+    display: flex
+    flex-direction: column-reverse
+    align-items: flex-start
+    // width: 450px
+    min-height: 450px
+    background-color: #555
+    padding: 40px 30px
+    position: relative
+    cursor: pointer
+    text-decoration: none
+    &--1-2
+      grid-row: span 2
+      padding: 80px 50px
+    &__hover
+      display: none
+      z-index: 1
+    &:hover>.card__hover
+      display: block
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(180deg, rgba(#5f407b,0.8) 0%, rgba(#4a50a8, 0.1) 100%)
+        z-index: -1
+    &__img
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &__title  
+      font-family: 'Ubuntu'
+      font-size: 30px
+      font-weight: 700
+      letter-spacing: -2px
+      color: $light-text
+      margin: 0
+      z-index: 2
+    &__date
+      font-family: 'Ubuntu'
+      font-size: 30px
+      font-weight: 200
+      letter-spacing: -2px
+      color: $light-text
+      margin: 0
+      z-index: 2
